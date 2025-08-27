@@ -1,0 +1,6 @@
+id=DynamicAODWallpapers
+name=Dynamic AOD Wallpapers (OneUI)
+version=1.0.0
+versionCode=100
+author=mikhailfur
+description=Replaces floating_feature.xml to enable dynamic AOD wallpapers on OneUI devices.

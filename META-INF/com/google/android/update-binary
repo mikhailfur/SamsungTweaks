@@ -1,0 +1,36 @@
+#!/sbin/sh
+#
+# Magisk Module Installer Script
+#
+
+# Определяем архитектуру устройства
+if [ -z "$ARCH" ]; then
+  ARCH32='armeabi-v7a arm-v7a'
+  ARCH64='arm64-v8a'
+  if [ "$(getprop ro.product.cpu.abi)" = "x86" ]; then
+    ARCH=x86
+    ARCH32=x86
+    ARCH64=x86_64
+  elif [ "$(getprop ro.product.cpu.abi)" = "x86_64" ]; then
+    ARCH=x86_64
+    ARCH32=x86
+    ARCH64=x86_64
+  else
+    if [ -d /system/lib64 ]; then
+      ARCH=arm64
+    else
+      ARCH=arm
+    fi
+  fi
+fi
+
+# Устанавливаем пути
+OUTFD=$2
+ZIPFILE=$3
+
+# Распаковываем модуль
+ui_print "- Распаковка файлов модуля"
+unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
+
+# Запускаем основной скрипт установки
+. $MODPATH/customize.sh

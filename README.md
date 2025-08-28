@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Samsung Galaxy A55](https://img.shields.io/badge/Samsung-Galaxy%20A55-1428A0?style=for-the-badge)
-![OneUI](https://img.shields.io/badge/OneUI-6.1-00D4AA?style=for-the-badge)
+![OneUI](https://img.shields.io/badge/OneUI-7-00D4AA?style=for-the-badge)
 ![Magisk](https://img.shields.io/badge/Magisk-✓-00C853?style=for-the-badge)
 ![KernelSU](https://img.shields.io/badge/KernelSU-✓-FF6B35?style=for-the-badge)
 

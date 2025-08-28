@@ -11,7 +11,7 @@ ORIG_FILE=/system/etc/floating_feature.xml
 MOD_BACKUP=$MODPATH/system/etc/floating_feature.xml.bak
 
 ui_print "**********************************************"
-ui_print "        Dynamic AOD Wallpapers (OneUI)        "
+ui_print "          Samsung A55 Tweaks (OneUI)          "
 ui_print "              by mikhailfur                   "
 ui_print "**********************************************"
 

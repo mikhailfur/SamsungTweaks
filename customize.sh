@@ -3,45 +3,65 @@
 # shellcheck disable=SC2148
 #
 
-# Путь к оригинальному файлу
-ORIG_FILE=/system/etc/floating_feature.xml
+# Пути к оригинальным файлам
+ORIG_FLOATING_FILE=/system/etc/floating_feature.xml
+ORIG_CAMERA_FILE=/system/cameradata/camera-feature.xml
 
-# Путь для сохранения бэкапа внутри модуля
-# Magisk/KernelSU автоматически сохранит его в нужном месте
-MOD_BACKUP=$MODPATH/system/etc/floating_feature.xml.bak
+# Пути для сохранения бэкапов внутри модуля
+MOD_FLOATING_BACKUP=$MODPATH/system/etc/floating_feature.xml.bak
+MOD_CAMERA_BACKUP=$MODPATH/system/cameradata/camera-feature.xml.bak
 
 ui_print "**********************************************"
 ui_print "          Samsung A55 Tweaks (OneUI)          "
 ui_print "              by mikhailfur                   "
 ui_print "**********************************************"
 
-# Проверяем, существует ли оригинальный файл
-if [ -f "$ORIG_FILE" ]; then
-  ui_print "- Найдена оригинальная конфигурация..."
+# Проверяем и создаем бэкап для floating_feature.xml
+if [ -f "$ORIG_FLOATING_FILE" ]; then
+  ui_print "- Найдена оригинальная конфигурация floating_feature.xml..."
   ui_print "- Создание резервной копии..."
 
-  # Создаем директорию для бэкапа, если ее нет
-  mkdir -p "$(dirname "$MOD_BACKUP")"
+  mkdir -p "$(dirname "$MOD_FLOATING_BACKUP")"
+  cp -a "$ORIG_FLOATING_FILE" "$MOD_FLOATING_BACKUP"
 
-  # Копируем оригинальный файл в бэкап (БЕЗ флага -Z)
-  cp -a "$ORIG_FILE" "$MOD_BACKUP"
-
-  if [ -f "$MOD_BACKUP" ]; then
-    ui_print "- Резервная копия успешно создана!"
+  if [ -f "$MOD_FLOATING_BACKUP" ]; then
+    ui_print "- Резервная копия floating_feature.xml успешно создана!"
   else
-    ui_print "- ОШИБКА: Не удалось создать резервную коию."
+    ui_print "- ОШИБКА: Не удалось создать резервную копию floating_feature.xml."
     ui_print "- Установка прервана."
-    abort "Не удалось создать бэкап файла."
+    abort "Не удалось создать бэкап файла floating_feature.xml."
   fi
 else
   ui_print "- Оригинальный файл floating_feature.xml не найден."
   ui_print "- Установка продолжится без создания бэкапа."
 fi
 
-ui_print "- Установка нового файла floating_feature.xml..."
+# Проверяем и создаем бэкап для camera-feature.xml
+if [ -f "$ORIG_CAMERA_FILE" ]; then
+  ui_print "- Найдена оригинальная конфигурация camera-feature.xml..."
+  ui_print "- Создание резервной копии..."
 
-# Установка прав доступа для нового файла
-# 644 (-rw-r--r--) владелец: root (0), группа: root (0)
+  mkdir -p "$(dirname "$MOD_CAMERA_BACKUP")"
+  cp -a "$ORIG_CAMERA_FILE" "$MOD_CAMERA_BACKUP"
+
+  if [ -f "$MOD_CAMERA_BACKUP" ]; then
+    ui_print "- Резервная копия camera-feature.xml успешно создана!"
+  else
+    ui_print "- ОШИБКА: Не удалось создать резервную копию camera-feature.xml."
+    ui_print "- Установка прервана."
+    abort "Не удалось создать бэкап файла camera-feature.xml."
+  fi
+else
+  ui_print "- Оригинальный файл camera-feature.xml не найден."
+  ui_print "- Установка продолжится без создания бэкапа."
+fi
+
+ui_print "- Установка новых файлов конфигурации..."
+
+# Установка прав доступа для floating_feature.xml
 set_perm "$MODPATH/system/etc/floating_feature.xml" 0 0 0644
+
+# Установка прав доступа для camera-feature.xml
+set_perm "$MODPATH/system/cameradata/camera-feature.xml" 0 0 0644
 
 ui_print "- Установка завершена!"

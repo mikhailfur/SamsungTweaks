@@ -8,7 +8,7 @@
 
 **Мощные твики для Samsung Galaxy для работы GalaxyAI и динамических обоев AOD**
 
-[![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg)](https://github.com/mikhailfur/SamsungA55Tweaks/releases)
+[![Version](https://img.shields.io/badge/Version-1.3.0-red.svg)](https://github.com/mikhailfur/SamsungA55Tweaks/releases)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)</br>
 [![Telegram](https://img.shields.io/badge/Telegram-@dataisnotfound-0088CC.svg?logo=telegram)](https://t.me/dataisnotfound)
 

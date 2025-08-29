@@ -1,4 +1,4 @@
-# 🚀 SamsungA55Tweaks
+# 🚀 SamsungTweaks
 
 <div align="center">
 

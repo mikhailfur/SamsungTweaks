@@ -2,15 +2,14 @@
 
 <div align="center">
 
-![Samsung Galaxy A55](https://img.shields.io/badge/Samsung-Galaxy%20A55-1428A0?style=for-the-badge)
 ![OneUI](https://img.shields.io/badge/OneUI-7-00D4AA?style=for-the-badge)
 ![Magisk](https://img.shields.io/badge/Magisk-✓-00C853?style=for-the-badge)
 ![KernelSU](https://img.shields.io/badge/KernelSU-✓-FF6B35?style=for-the-badge)
 
-**Мощные твики для Samsung Galaxy A55 с поддержкой GalaxyAI и динамических обоев AOD**
+**Мощные твики для Samsung Galaxy для работы GalaxyAI и динамических обоев AOD**
 
-[![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg)](https://github.com/mikhailfur/SamsungA55Tweaks/releases)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.3.0-red.svg)](https://github.com/mikhailfur/SamsungA55Tweaks/releases)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)</br>
 [![Telegram](https://img.shields.io/badge/Telegram-@dataisnotfound-0088CC.svg?logo=telegram)](https://t.me/dataisnotfound)
 
 </div>
@@ -40,18 +39,18 @@
 
 | Устройство | Прошивка | Статус |
 |------------|----------|---------|
-| **Samsung Galaxy A55** | `A556EXXSABYG2` | ✅ **Протестировано** |
-| **Samsung Galaxy A55** | Другие прошивки | ⚠️ **Может работать** |
-| **Samsung Galaxy A56** | Другие прошивки | ❌ **Не работает**    |
+| **Samsung Galaxy A55**   | `A556EXXSABYG2` | ✅ **Протестировано** |
+| **Samsung Galaxy S24FE** | `S721BXXS6BYF5` | ✅ **Протестировано** |
+| **Samsung Galaxy A54**   | `A546EXXSFDYH1` | ✅ **Протестировано** |
 
-> **⚠️ Важно:** Модуль разработан специально для Samsung Galaxy A55. Использование на других устройствах может привести к нестабильной работе.
+> **⚠️ Важно:** Модуль не будет работать на устройствах, где функции динамических обоев AOD уже имеется.
 
 ---
 
 ## 🛠️ Установка
 
 ### Предварительные требования
-- Samsung Galaxy A55
+- Телефон на базе Samsung Galaxy
 - Root доступ (Magisk или KernelSU)
 - OneUI 7 или выше*
 
@@ -113,8 +112,6 @@
 - 💬 [Telegram](https://t.me/dataisnotfound)
 
 ### Часто задаваемые вопросы
-**Q: Модуль работает на других устройствах Samsung?**  
-A: Нет, модуль разработан специально для Galaxy A55.
 
 **Q: Можно ли использовать без root?**  
 A: Нет, требуется Magisk или KernelSU.

@@ -1,6 +1,6 @@
-id=SamsungA55Tweaks
-name=Samsung A55 Tweaks (OneUI)
-version=1.1.0
-versionCode=110
+id=SamsungTweaks
+name=SamsungTweaks (OneUI)
+version=1.3.0
+versionCode=130
 author=mikhailfur
 description=Turn on hidden features on Samsung device.

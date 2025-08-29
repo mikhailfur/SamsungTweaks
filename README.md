@@ -6,7 +6,7 @@
 ![Magisk](https://img.shields.io/badge/Magisk-✓-00C853?style=for-the-badge)
 ![KernelSU](https://img.shields.io/badge/KernelSU-✓-FF6B35?style=for-the-badge)
 
-**Мощные твики для Samsung Galaxy A55 с поддержкой GalaxyAI и динамических обоев AOD**
+**Мощные твики для Samsung Galaxy для работы GalaxyAI и динамических обоев AOD**
 
 [![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg)](https://github.com/mikhailfur/SamsungA55Tweaks/releases)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)</br>

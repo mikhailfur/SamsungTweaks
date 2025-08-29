@@ -1,0 +1,26 @@
+#!/sbin/sh
+#
+# Magisk/KSU Module Installer Script
+#
+
+# Вывод информации о правах
+OUTFD=/proc/self/fd/$2
+ui_print() {
+  echo -n "ui_print $1\n" > $OUTFD
+  echo -n "ui_print\n" > $OUTFD
+}
+
+# Путь к ZIP-файлу модуля
+ZIPFILE="$3"
+
+# Распаковка установщика Magisk
+unzip -o "$ZIPFILE" 'customize.sh' -d /tmp >&2
+unzip -o "$ZIPFILE" 'verify.sh' -d /tmp >&2
+[ -f "/tmp/verify.sh" ] && . /tmp/verify.sh
+
+# Запуск основного скрипта установки
+if [ -f "/tmp/customize.sh" ]; then
+  . /tmp/customize.sh
+fi
+
+exit 0
